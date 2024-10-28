@@ -38,4 +38,8 @@ jobs:
       - name: variable del entorno
         run: echo "Variable del entorno ${{env.TEST_ENV_1}}"  
 
+      - name: variable del entorno con Secreto
+        run: echo "Variable del entorno ${{secrets.TEST_ENV_1}}"  
+  
+
         
