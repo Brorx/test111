@@ -28,12 +28,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: variable del repo
-        run: echo "Variable del repo ${{vars.TEST_VAR_REPO}}"
-
       - name: Print all environment variables
         run: printenv  
+
+      # Esta si ejecuta la repo_var
+      - name: variable del repo
+        run: echo "Variable del repo ${{vars.TEST_VAR_REPO}}"
 
       - name: variable del entorno
         run: echo "Variable del entorno ${{env.TEST_ENV_1}}"  
@@ -41,7 +41,7 @@ jobs:
       - name: variable del entorno con Secreto
         run: echo "Variable del entorno ${{secrets.TEST_ENV_1}}"  
 
-      - name: variable del entorno con VAR
+      - name: Esta si ejecuta la enviroment_var
         run: echo "Variable del entorno ${{vars.TEST_ENV_1}}"  
 
         
