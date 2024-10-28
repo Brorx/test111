@@ -17,10 +17,13 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   test:
+    strategy:
+      matrix:
+        envi: [test_2, test_1]
 
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: test_1
+    environment: ${{ matrix.envi }}
     
 
     # Steps represent a sequence of tasks that will be executed as part of the job
